@@ -1,0 +1,1 @@
+"use strict";function search(c,n){$(n).click(function(){window.open("../html/list.html?str="+encodeURI($(c).val())),console.log(11)})}

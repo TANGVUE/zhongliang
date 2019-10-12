@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>中粮我买网-购物车</title>
+    <link rel="stylesheet" href="../css/shopCart.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav">
+            <p>
+                <a href="###">免费注册</a>
+                <a href="###">我的账户</a>
+            </p>
+            <div class="welcome">hi~欢迎来到我买网，请<a href="../html/login.html">登入</a></div>
+        </div>
+        <a href="../index.html">
+            <h1>
+                中粮我买网
+            </h1>
+        </a>
+    </header>
+    <div class="shopCart"></div>
+    <div class="center">
+        <div class="success-footer w">
+            <div class="beian">
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102000458">
+
+                    <img src="http://gz.womai.com/zhongliang/city/common/images/beian.png">
+                    <p style="color:#606060;">京公网安备 11010102000458号</p>
+                </a>
+
+                <span>|</span><span> 京ICP备 13003995号</span> <span>|</span> <a target="_blank"
+                    href="http://www.womai.com/upload/2019/7/1/20190701043116206.jpg?size=429291">营业执照（统一社会信用代码）91110000055590239L
+                </a><span>|</span> 食品经营许可证：JY11105020028185<p></p>
+                <p class="copyright">Copyright©2009-2018 womai.com.hk 版权所有</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/data.js"></script>
+<script src="../lib/jQuery/jquery.js"></script>
+<script src="../js/shopCart.js"></script>
+<script src="../js/getUser.js"></script>
+<script>
+    var data = [];
+    var shops = [];
+    var gu = new GetUser('userid', '.welcome');
+    gu.getData();
+    var p = gu.getCart();
+
+    p.then(function (result) {
+        result.orders.forEach(order => {
+            if (shops.indexOf(order.g_shop) == -1) {
+                shops.push(order.g_shop);
+                data.push({
+                    shopName: order.g_shop,
+                    goods: [{
+                        id: order.o_id,
+                        introduce: order.g_name,
+                        imgURL: order.g_url,
+                        price: order.g_price,
+                        count: order.count * 1
+                    }]
+                });
+            } else {
+                data.forEach(obj => {
+                    if (obj.shopName == order.g_shop) {
+                        obj.goods.push({
+                            id: order.o_id,
+                            introduce: order.g_name,
+                            imgURL: order.g_url,
+                            price: order.g_price,
+                            count: order.count * 1
+                        });
+                    }
+                });
+            }
+        });
+
+        shopCart({
+            // 控制的dom节点
+            el: '.shopCart',
+            // 需要渲染的数据
+            data,
+            // 分类方式：是否按照店铺分类渲染
+            // true:店铺分类，
+            // false:不按店铺分类
+            classification: true,
+            openSearch: true
+        });
+    });
+</script>
+
+</html>

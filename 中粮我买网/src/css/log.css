@@ -1,0 +1,229 @@
+#login .content {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#login .head {
+  height: 92px;
+  margin-bottom: 20px;
+}
+
+#login .head .content {
+  border-bottom: 2px solid #479202;
+}
+
+#login .head h1 {
+  width: 224px;
+  height: 100%;
+  text-indent: -9999px;
+  background: url(../img/loginimg/20190726051205143.png) center center no-repeat;
+  background-size: 100% 100%;
+}
+
+#login .main {
+  height: 500px;
+  margin-bottom: 10px;
+}
+
+#login .main .main-in {
+  position: relative;
+  background: url(../img/loginimg/20190919113615590.jpg) center center no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#login .main .main-in .login-panel {
+  position: absolute;
+  width: 306px;
+  height: 458px;
+  border: 4px solid #ebebeb;
+  top: 30px;
+  background-color: #f7f8f8;
+  right: 34px;
+  padding: 0 34px;
+}
+
+#login .main .main-in .login-panel .err-tips {
+  position: absolute;
+  padding: 0 15px;
+  background-color: #fee6e7;
+  color: #ff8080;
+  font-size: 12px;
+  display: none;
+}
+
+#login .main .main-in .login-panel .err-tips:nth-child(2) {
+  top: 40px;
+}
+
+#login .main .main-in .login-panel .err-tips:nth-child(5) {
+  top: 93px;
+}
+
+#login .main .main-in .login-panel .err-tips:nth-child(7) {
+  top: 150px;
+}
+
+#login .main .main-in .login-panel .title {
+  font-size: 16px;
+  color: #595757;
+  margin-top: 15px;
+}
+
+#login .main .main-in .login-panel .username,
+#login .main .main-in .login-panel .password {
+  width: 272px;
+  height: 26px;
+  padding: 0 15px;
+  border: 1px solid #cccccc;
+  font-size: 12px;
+}
+
+#login .main .main-in .login-panel .username {
+  margin-top: 20px;
+}
+
+#login .main .main-in .login-panel .tips {
+  font-size: 12px;
+  color: #cccccc;
+  text-align: right;
+  padding: 5px 0;
+}
+
+#login .main .main-in .login-panel > a {
+  display: block;
+  float: left;
+  margin-top: 34px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#login .main .main-in .login-panel .enter {
+  width: 204px;
+  color: white;
+  overflow: hidden;
+  background: url(../img/loginimg/login.png) 0 -37px no-repeat;
+}
+
+#login .main .main-in .login-panel .rigister {
+  width: 80px;
+  color: #479202;
+  overflow: hidden;
+  margin-left: 18px;
+  background: url(../img/loginimg/login.png) -89px -149px no-repeat;
+}
+
+#login .main .main-in .login-panel .dashed {
+  width: 100%;
+  height: 22px;
+  float: left;
+  border-bottom: 1px dashed #cccccc;
+}
+
+#login .main .main-in .login-panel .friendtips {
+  line-height: 20px;
+  font-size: 15px;
+  padding: 5px 0 5px 15px;
+  float: left;
+}
+
+#login .main .main-in .login-panel .friendships {
+  overflow: hidden;
+  float: left;
+}
+
+#login .main .main-in .login-panel .friendships li {
+  padding: 0 15px;
+  border-right: 1px solid #dcdddd;
+  font-size: 10px !important;
+  float: left;
+  margin-top: 4px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(1) i {
+  background-position: -209px -75px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(2) i {
+  background-position: -209px -95px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(3) i {
+  background-position: -209px -115px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(4) i {
+  background-position: -209px -135px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(5) i {
+  background-position: -209px -160px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(6) i {
+  background-position: -209px -180px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(7) i {
+  background-position: -209px -200px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(8) i {
+  background-position: -209px -220px;
+}
+
+#login .main .main-in .login-panel .friendships li:nth-child(9) i {
+  background-position: -209px -240px;
+}
+
+#login .main .main-in .login-panel .friendships i {
+  font-style: none;
+  display: inline-block;
+  background: url(../img/loginimg/login.png) no-repeat;
+  width: 16px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+#login .main .main-in .login-panel .friendships a {
+  color: #807e7e;
+  vertical-align: middle;
+}
+
+#login .footer {
+  width: 100%;
+  height: 126px;
+}
+
+#login .footer .footer-in {
+  height: 83px;
+  background-color: #efefef;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 15px;
+  color: #606060;
+}
+
+#login .footer .footer-in p {
+  padding: 5px 0;
+}
+
+#login .footer .footer-in p .icon {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  background: url(../img/loginimg/beian.png) center center no-repeat;
+  background-size: 100% 100%;
+  font-style: normal;
+  vertical-align: middle;
+}
+
+#login .footer .bottom {
+  height: 28px;
+  background-color: #8cb91e;
+}
